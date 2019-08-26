@@ -12,9 +12,34 @@
         
         
     
+    
     <link rel="stylesheet" href="../gitbook/style.css">
 
     
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/lightbox.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
             
                 
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
@@ -46,6 +71,9 @@
         
     
 
+
+    
+
         
     
     
@@ -57,7 +85,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../java-basis/" />
+    <link rel="next" href="../jvm/" />
     
     
     <link rel="prev" href="../" />
@@ -115,12 +143,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3" data-path="../java-basis/">
+        <li class="chapter " data-level="1.3" data-path="../jvm/">
             
-                <a href="../java-basis/">
+                <a href="../jvm/">
             
                     
-                    JAVA基础
+                    Java虚拟机
             
                 </a>
             
@@ -129,9 +157,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.3.1" data-path="../java-basis/introduction.html">
+        <li class="chapter " data-level="1.3.1" data-path="../jvm/introduction.html">
             
-                <a href="../java-basis/introduction.html">
+                <a href="../jvm/introduction.html">
             
                     
                     Java简介
@@ -142,12 +170,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="../java-basis/runtime_data_area.html">
+        <li class="chapter " data-level="1.3.2" data-path="../jvm/runtime_data_area.html">
             
-                <a href="../java-basis/runtime_data_area.html">
+                <a href="../jvm/runtime_data_area.html">
             
                     
                     运行时数据区域
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../jvm/gc.html">
+            
+                <a href="../jvm/gc.html">
+            
+                    
+                    GC
             
                 </a>
             
@@ -372,8 +413,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="introduction">Introduction</h1>
-
+                                <html><head></head><body><h1 id="introduction">Introduction</h1>
+</body></html>
                                 
                                 </section>
                             
@@ -405,7 +446,7 @@
                 </a>
                 
                 
-                <a href="../java-basis/" class="navigation navigation-next " aria-label="Next page: JAVA基础">
+                <a href="../jvm/" class="navigation navigation-next " aria-label="Next page: Java虚拟机">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -416,14 +457,47 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"日常","level":"1.2","depth":1,"next":{"title":"JAVA基础","level":"1.3","depth":1,"path":"java-basis/README.md","ref":"java-basis/README.md","articles":[{"title":"Java简介","level":"1.3.1","depth":2,"path":"java-basis/introduction.md","ref":"java-basis/introduction.md","articles":[]},{"title":"运行时数据区域","level":"1.3.2","depth":2,"path":"java-basis/runtime_data_area.md","ref":"java-basis/runtime_data_area.md","articles":[]}]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"daily/README.md","mtime":"2019-08-02T01:55:04.943Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-20T09:50:20.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"日常","level":"1.2","depth":1,"next":{"title":"Java虚拟机","level":"1.3","depth":1,"path":"jvm/README.md","ref":"jvm/README.md","articles":[{"title":"Java简介","level":"1.3.1","depth":2,"path":"jvm/introduction.md","ref":"jvm/introduction.md","articles":[]},{"title":"运行时数据区域","level":"1.3.2","depth":2,"path":"jvm/runtime_data_area.md","ref":"jvm/runtime_data_area.md","articles":[]},{"title":"GC","level":"1.3.3","depth":2,"path":"jvm/gc.md","ref":"jvm/gc.md","articles":[]}]},"previous":{"title":"简介","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["lightbox","mermaid-gb3","hide-element","code","back-to-top-button","chapter-fold","splitter","livereload"],"pluginsConfig":{"chapter-fold":{},"livereload":{},"splitter":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"daily/README.md","mtime":"2019-08-02T01:55:04.943Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-26T08:27:10.530Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
+    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/jquery.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/lightbox.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-hide-element/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
     
         
         <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
@@ -453,6 +527,8 @@
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
         
     
+
+    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
