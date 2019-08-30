@@ -200,6 +200,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.4" data-path="jvm-tool.html">
+            
+                <a href="jvm-tool.html">
+            
+                    
+                    JVM性能监控与故障处理工具
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -419,8 +432,8 @@
                                 
                                 <html><head></head><body><h1 id="&#x8FD0;&#x884C;&#x65F6;&#x6570;&#x636E;&#x533A;&#x57DF;">&#x8FD0;&#x884C;&#x65F6;&#x6570;&#x636E;&#x533A;&#x57DF;</h1>
 <h2 id="&#x603B;&#x89C8;">&#x603B;&#x89C8;</h2>
-<p><a href="img/architecture.png" data-lightbox="fc3ba64e-e0f8-488f-a20f-00a7367478f1" data-title="&#x6267;&#x884C;&#x8FC7;&#x7A0B;"><img src="img/architecture.png" alt="&#x6267;&#x884C;&#x8FC7;&#x7A0B;"></a></p>
-<p><a href="img/runtime.jpg" data-lightbox="ecedc71e-2fbd-45ef-96e8-72e440b9330b" data-title="&#x8FD0;&#x884C;&#x65F6;&#x6570;&#x636E;&#x533A;&#x57DF;"><img src="img/runtime.jpg" alt="&#x8FD0;&#x884C;&#x65F6;&#x6570;&#x636E;&#x533A;&#x57DF;"></a></p>
+<p><a href="img/architecture.png" data-lightbox="e3c95126-8410-43e3-bf80-85286e3ee21f" data-title="&#x6267;&#x884C;&#x8FC7;&#x7A0B;"><img src="img/architecture.png" alt="&#x6267;&#x884C;&#x8FC7;&#x7A0B;"></a></p>
+<p><a href="img/runtime.jpg" data-lightbox="e2298c14-67d5-4cae-9d0a-c551b07db1f6" data-title="&#x8FD0;&#x884C;&#x65F6;&#x6570;&#x636E;&#x533A;&#x57DF;"><img src="img/runtime.jpg" alt="&#x8FD0;&#x884C;&#x65F6;&#x6570;&#x636E;&#x533A;&#x57DF;"></a></p>
 <h3 id="&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;">&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;</h3>
 <p>&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;&#xFF08;Program Counter Register&#xFF09;&#x4E5F;&#x79F0;&#xFF1A;PC&#x5BC4;&#x5B58;&#x5668;&#x3002;</p>
 <ul>
@@ -447,7 +460,7 @@
 </ul>
 <h3 id="java&#x5806;">Java&#x5806;</h3>
 <p>Java&#x5806;&#xFF08;Java Heap&#xFF09;&#xFF0C;&#x4F7F;&#x7528;<code>-Xmx&lt;size&gt;</code>,<code>-Xms&lt;size&gt;</code>&#x6765;&#x8BBE;&#x7F6E;Java&#x5806;&#x7684;&#x521D;&#x59CB;&#x6700;&#x5927;&#x3001;&#x6700;&#x5C0F;&#x503C;</p>
-<p><a href="img/heap.png" data-lightbox="17f4f0e7-22a2-413c-bbb1-d6ddc2bb7373" data-title="Java&#x5806;"><img src="img/heap.png" alt="Java&#x5806;"></a></p>
+<p><a href="img/heap.png" data-lightbox="cfef3d89-6e4d-4269-ad42-497d4a3a69f2" data-title="Java&#x5806;"><img src="img/heap.png" alt="Java&#x5806;"></a></p>
 <table>
 <thead>
 <tr>
@@ -495,7 +508,7 @@
 <li>&#x5982;&#x679C;&#x5728;&#x5806;&#x4E2D;&#x6CA1;&#x6709;&#x5185;&#x5B58;&#x5B8C;&#x6210;&#x5B9E;&#x4F8B;&#x5206;&#x914D;&#xFF0C;&#x5E76;&#x4E14;&#x5806;&#x4E5F;&#x65E0;&#x6CD5;&#x518D;&#x6269;&#x5C55;&#x65F6;&#xFF0C;&#x629B;&#x51FA;OOM&#x5F02;&#x5E38;</li>
 </ul>
 <h3 id="&#x65B9;&#x6CD5;&#x533A;">&#x65B9;&#x6CD5;&#x533A;</h3>
-<p>&#x65B9;&#x6CD5;&#x533A;&#xFF08;Method Area&#xFF09;&#xFF0C;&#x53C8;&#x79F0;&#xFF1A;Non-Heap&#xFF08;&#x975E;&#x5806;&#xFF09;&#xFF0C;&#x4F7F;&#x7528;<code>-XX:MaxPermSize=&lt;size&gt;</code>,<code>-XX:PermSize=&lt;size&gt;</code>&#x6765;&#x9650;&#x5236;&#x65B9;&#x6CD5;&#x533A;&#x7684;&#x6700;&#x5927;&#x3001;&#x6700;&#x5C0F;&#x503C;&#x3002;</p>
+<p>&#x65B9;&#x6CD5;&#x533A;&#xFF08;Method Area&#xFF09;&#xFF0C;&#x53C8;&#x79F0;&#xFF1A;Non-Heap&#xFF08;&#x975E;&#x5806;&#xFF09;&#xFF0C;&#x4F7F;&#x7528;<code>-XX:MaxPermSize=&lt;size&gt;</code>&#xFF0C;<code>-XX:PermSize=&lt;size&gt;</code>&#xFF08;&#x5143;&#x7A7A;&#x95F4;&#x4F7F;&#x7528;&#xFF1A;<code>-XX:MaxMetaspaceSize=&lt;size&gt;</code>&#xFF0C;<code>-XX:MetaspaceSize=&lt;size&gt;</code>&#xFF09;&#x6765;&#x8BBE;&#x5B9A;&#x6C38;&#x4E45;&#x4EE3;/&#x5143;&#x7A7A;&#x95F4;&#x6269;&#x5BB9;&#x65F6;&#x89E6;&#x53D1;FullGC&#x7684;&#x521D;&#x59CB;&#x5316;&#x9608;&#x503C;</p>
 <ul>
 <li>&#x5728;&#x865A;&#x62DF;&#x673A;&#x542F;&#x52A8;&#x65F6;&#x521B;&#x5EFA;&#xFF0C;&#x88AB;&#x6240;&#x6709;&#x7EBF;&#x7A0B;&#x5171;&#x4EAB;&#xFF0C;&#x4E14;&#x53EA;&#x6709;&#x4E00;&#x4E2A;</li>
 <li>&#x7528;&#x4E8E;&#x5B58;&#x50A8;&#x5DF2;&#x88AB;&#x865A;&#x62DF;&#x673A;&#x52A0;&#x8F7D;&#x7684;&#x7C7B;&#x4FE1;&#x606F;&#x3001;&#x5E38;&#x91CF;&#x3001;&#x9759;&#x6001;&#x53D8;&#x91CF;&#x3001;&#x5373;&#x65F6;&#x7F16;&#x8BD1;&#x5668;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x4EE3;&#x7801;&#x7B49;&#x6570;&#x636E;</li>
@@ -524,11 +537,11 @@
 <li><p>&#x4E3A;&#x65B0;&#x5BF9;&#x8C61;&#x5206;&#x914D;&#x5185;&#x5B58;&#xFF08;&#x4ECE;&#x5806;&#x4E2D;&#x5212;&#x5206;&#xFF09;&#xFF0C;&#x5206;&#x914D;&#x65B9;&#x5F0F;&#x6709;&#xFF1A;&#x6307;&#x9488;&#x78B0;&#x649E;&#xFF0C;&#x7A7A;&#x95F2;&#x5217;&#x8868;&#xFF0C;&#x4FDD;&#x6301;&#x539F;&#x5B50;&#x6027;&#xFF1A;TLAB</p>
 <ul>
 <li>&#x6307;&#x9488;&#x78B0;&#x649E;&#xFF1A;Java&#x5806;&#x5185;&#x5B58;&#x7EDD;&#x5BF9;&#x89C4;&#x6574;
-<a href="img/point.png" data-lightbox="34d4759d-e768-4cba-a8a7-4794afecc6b7" data-title="&#x6307;&#x9488;&#x78B0;&#x649E;"><img src="img/point.png" alt="&#x6307;&#x9488;&#x78B0;&#x649E;"></a></li>
+<a href="img/point.png" data-lightbox="3a6936e2-226d-48d0-9948-e11a7721297b" data-title="&#x6307;&#x9488;&#x78B0;&#x649E;"><img src="img/point.png" alt="&#x6307;&#x9488;&#x78B0;&#x649E;"></a></li>
 <li>&#x7A7A;&#x95F2;&#x5217;&#x8868;&#xFF1A;Java&#x5806;&#x5185;&#x5B58;&#x4E0D;&#x89C4;&#x6574;
-<a href="img/list.png" data-lightbox="f5c0ad67-2aa1-485d-b914-5d1bbf5e2724" data-title="&#x7A7A;&#x95F2;&#x5217;&#x8868;"><img src="img/list.png" alt="&#x7A7A;&#x95F2;&#x5217;&#x8868;"></a></li>
+<a href="img/list.png" data-lightbox="e223001e-2440-4c8f-b964-b6aee3238cc1" data-title="&#x7A7A;&#x95F2;&#x5217;&#x8868;"><img src="img/list.png" alt="&#x7A7A;&#x95F2;&#x5217;&#x8868;"></a></li>
 <li>TLAB&#xFF08;Thread Local Allocation Buffer&#xFF09;&#xFF1A;&#x53EF;&#x901A;&#x8FC7;<code>-XX:+/-UseTLAB</code>&#x542F;&#x7528;&#x6216;&#x7981;&#x7528;
-<a href="img/TLAB.png" data-lightbox="f873cd32-de76-4dbc-85d6-e9eb49079540" data-title="TLAB"><img src="img/TLAB.png" alt="TLAB"></a></li>
+<a href="img/TLAB.png" data-lightbox="4a56cb50-3258-4377-97b6-32437494b65d" data-title="TLAB"><img src="img/TLAB.png" alt="TLAB"></a></li>
 </ul>
 </li>
 <li><p>&#x5C06;&#x65B0;&#x5BF9;&#x8C61;&#x4E2D;&#x7684;&#x5B57;&#x6BB5;&#x90FD;&#x521D;&#x59CB;&#x5316;&#x4E3A;&#x96F6;&#x503C;</p>
@@ -552,9 +565,9 @@
 <p>Java&#x7A0B;&#x5E8F;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x6808;&#x4E0A;&#x7684;reference&#x6570;&#x636E;&#x6765;&#x64CD;&#x4F5C;&#x5806;&#x4E0A;&#x7684;&#x5177;&#x4F53;&#x5BF9;&#x8C61;&#xFF0C;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x79CD;&#xFF1A;</p>
 <ul>
 <li>&#x53E5;&#x67C4;&#xFF1A;Java&#x5806;&#x4E2D;&#x4F1A;&#x5212;&#x5206;&#x51FA;&#x4E00;&#x5757;&#x5185;&#x5B58;&#x6765;&#x4F5C;&#x4E3A;&#x53E5;&#x67C4;&#x6C60;&#xFF0C;reference&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x5C31;&#x662F;&#x5BF9;&#x8C61;&#x7684;&#x53E5;&#x67C4;&#x5730;&#x5740;&#xFF0C;&#x800C;&#x53E5;&#x67C4;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x5BF9;&#x8C61;&#x5B9E;&#x4F8B;&#x6570;&#x636E;&#x4E0E;&#x7C7B;&#x578B;&#x6570;&#x636E;&#x5404;&#x81EA;&#x7684;&#x5177;&#x4F53;&#x5730;&#x5740;&#x4FE1;&#x606F;
-<a href="img/handle.png" data-lightbox="5b306d48-d045-4678-bf65-302752de0d7d" data-title="&#x53E5;&#x67C4;"><img src="img/handle.png" alt="&#x53E5;&#x67C4;"></a></li>
+<a href="img/handle.png" data-lightbox="c4188cc7-e2e5-4acb-a816-deec4d825170" data-title="&#x53E5;&#x67C4;"><img src="img/handle.png" alt="&#x53E5;&#x67C4;"></a></li>
 <li><p>&#x76F4;&#x63A5;&#x6307;&#x9488;&#xFF1A;reference&#x4E2D;&#x5B58;&#x50A8;&#x7684;&#x76F4;&#x63A5;&#x5C31;&#x662F;&#x5BF9;&#x8C61;&#x5730;&#x5740;
-<a href="img/direct.png" data-lightbox="1fd2ce2a-7672-4471-97e2-d4c7eb2585f3" data-title="&#x76F4;&#x63A5;&#x6307;&#x9488;"><img src="img/direct.png" alt="&#x76F4;&#x63A5;&#x6307;&#x9488;"></a>
+<a href="img/direct.png" data-lightbox="d617618c-21c2-4b20-bb89-3241e49bc667" data-title="&#x76F4;&#x63A5;&#x6307;&#x9488;"><img src="img/direct.png" alt="&#x76F4;&#x63A5;&#x6307;&#x9488;"></a>
 &#x4E24;&#x79CD;&#x8BBF;&#x95EE;&#x65B9;&#x5F0F;&#x5404;&#x6709;&#x4F18;&#x52A3;&#xFF1A;</p>
 </li>
 <li><p>&#x53E5;&#x67C4;&#xFF1A;&#x5728;&#x5BF9;&#x8C61;&#x88AB;&#x79FB;&#x52A8;&#x65F6;&#x53EA;&#x4F1A;&#x6539;&#x53D8;&#x53E5;&#x67C4;&#x4E2D;&#x7684;&#x5B9E;&#x4F8B;&#x6570;&#x636E;&#x6307;&#x9488;&#xFF0C;&#x800C;reference&#x672C;&#x8EAB;&#x4E0D;&#x9700;&#x8981;&#x4FEE;&#x6539;</p>
@@ -740,7 +753,7 @@ at sun.misc.Unsafe.allocateMemory(Native Method)
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"运行时数据区域","level":"1.3.2","depth":2,"next":{"title":"GC","level":"1.3.3","depth":2,"path":"jvm/gc.md","ref":"jvm/gc.md","articles":[]},"previous":{"title":"Java简介","level":"1.3.1","depth":2,"path":"jvm/introduction.md","ref":"jvm/introduction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["lightbox","mermaid-gb3","page-toc-button","hide-element","code","back-to-top-button","chapter-fold","splitter","-sharing","sharing-plus","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy dsx2016.com 2019","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"jvm/runtime_data_area.md","mtime":"2019-08-20T09:50:12.299Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-26T10:26:20.695Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"运行时数据区域","level":"1.3.2","depth":2,"next":{"title":"GC","level":"1.3.3","depth":2,"path":"jvm/gc.md","ref":"jvm/gc.md","articles":[]},"previous":{"title":"Java简介","level":"1.3.1","depth":2,"path":"jvm/introduction.md","ref":"jvm/introduction.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["lightbox","mermaid-gb3","page-toc-button","hide-element","code","back-to-top-button","chapter-fold","splitter","-sharing","sharing-plus","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy dsx2016.com 2019","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"jvm/runtime_data_area.md","mtime":"2019-08-29T03:26:35.632Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-08-30T10:01:07.041Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
