@@ -58,7 +58,7 @@ Java堆（Java Heap），使用`-Xmx<size>`,`-Xms<size>`来设置Java堆的初�
 
 ### 方法区
 
-方法区（Method Area），又称：Non-Heap（非堆），使用`-XX:MaxPermSize=<size>`，`-XX:PermSize=<size>`（元空间使用：`-XX:MaxMetaspaceSize=<size>`，`-XX:MetaspaceSize=<size>`）来设定永久代/元空间扩容时触发FullGC的初始化阈值
+方法区（Method Area），又称：Non-Heap（非堆），使用`-XX:MaxPermSize=<size>`，`-XX:PermSize=<size>`（元空间使用：`-XX:MaxMetaspaceSize=<size>`，`-XX:MetaspaceSize=<size>`）来设定永久代/元空间扩容时触发Full GC的初始化阈值
 
 * 在虚拟机启动时创建，被所有线程共享，且只有一个
 * 用于存储已被虚拟机加载的类信息、常量、静态变量、即时编译器编译后的代码等数据
