@@ -2,8 +2,6 @@
 
 ## 总览
 
-![执行过程](img/architecture.png)
-
 ![运行时数据区域](img/runtime.jpg)
 
 ### 程序计数器
