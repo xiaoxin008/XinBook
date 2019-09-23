@@ -265,6 +265,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.9" data-path="compile.html">
+            
+                <a href="compile.html">
+            
+                    
+                    程序编译与代码优化
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -490,7 +503,7 @@
 <ul>
 <li>&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x6CD5;&#xFF08;Reference Counting&#xFF09;&#xFF1A;&#x7ED9;&#x5BF9;&#x8C61;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x5668;&#xFF0C;&#x6BCF;&#x5F53;&#x6709;&#x4E00;&#x4E2A;&#x5730;&#x65B9;&#x5F15;&#x7528;&#x5B83;&#x65F6;&#xFF0C;&#x8BA1;&#x6570;&#x5668;&#x5C31;&#x52A0;&#x4E00;&#xFF0C;&#x5F15;&#x7528;&#x5931;&#x6548;&#x65F6;&#xFF0C;&#x8BA1;&#x6570;&#x5668;&#x503C;&#x5C31;&#x51CF;&#x4E00;&#xFF0C;&#x5F53;&#x8BA1;&#x6570;&#x5668;&#x4E3A;0&#x65F6;&#xFF0C;&#x5373;&#x53EF;&#x56DE;&#x6536;&#x3002;&#x7F3A;&#x9677;&#xFF1A;&#x5F53;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x4E92;&#x76F8;&#x5FAA;&#x73AF;&#x5F15;&#x7528;&#xFF0C;&#x5219;&#x65E0;&#x6CD5;&#x88AB;&#x56DE;&#x6536;&#xFF0C;&#x4F46;&#x6D4B;&#x8BD5;&#x540E;GC&#x53EF;&#x4EE5;&#x56DE;&#x6536;&#xFF0C;&#x8BF4;&#x660E;&#x865A;&#x62DF;&#x673A;&#x5E76;&#x4E0D;&#x662F;&#x901A;&#x8FC7;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#x6CD5;&#x6765;&#x5224;&#x65AD;&#x5BF9;&#x8C61;&#x662F;&#x5426;&#x5B58;&#x6D3B;&#x7684;</li>
 <li>&#x53EF;&#x8FBE;&#x6027;&#x5206;&#x6790;&#x7B97;&#x6CD5;&#xFF08;Reachability Analysis&#xFF09;&#xFF1A;&#x901A;&#x8FC7;&#x4E00;&#x7CFB;&#x5217;&#x7684;&#x79F0;&#x4E3A;<code>GC Roots</code>&#x7684;&#x5BF9;&#x8C61;&#x4F5C;&#x4E3A;&#x8D77;&#x59CB;&#x70B9;&#xFF0C;&#x4ECE;&#x8FD9;&#x4E9B;&#x8282;&#x70B9;&#x5F00;&#x59CB;&#x5411;&#x4E0B;&#x641C;&#x7D22;&#xFF0C;&#x641C;&#x7D22;&#x8D70;&#x8FC7;&#x7684;&#x8DEF;&#x5F84;&#x79F0;&#x4E3A;&#x5F15;&#x7528;&#x94FE;&#xFF08;Reference Chain&#xFF09;&#xFF0C;&#x4ECE;GC Roots&#x5230;&#x8FD9;&#x4E2A;&#x5BF9;&#x8C61;&#x4E0D;&#x53EF;&#x8FBE;&#x65F6;&#xFF0C;&#x8BC1;&#x660E;&#x6B64;&#x5BF9;&#x8C61;&#x4E0D;&#x53EF;&#x7528;
-<a href="img/analysis.png" data-lightbox="5041c3c4-ad42-420d-90cf-5f16f6faf74a" data-title="Reachability Analysis"><img src="img/analysis.png" alt="Reachability Analysis"></a>
+<a href="img/analysis.png" data-lightbox="120cfb08-0f1a-4014-b8b6-b784bb91408d" data-title="Reachability Analysis"><img src="img/analysis.png" alt="Reachability Analysis"></a>
 GC Roots&#x7684;&#x5BF9;&#x8C61;&#x5305;&#x62EC;&#x4EE5;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;<ul>
 <li>&#x865A;&#x62DF;&#x673A;&#x6808;&#xFF08;&#x6808;&#x5E27;&#x4E2D;&#x7684;&#x672C;&#x5730;&#x53D8;&#x91CF;&#x8868;&#xFF09;&#x4E2D;&#x5F15;&#x7528;&#x7684;&#x5BF9;&#x8C61;</li>
 <li>&#x65B9;&#x6CD5;&#x533A;&#x4E2D;&#x7C7B;&#x9759;&#x6001;&#x5C5E;&#x6027;&#x5F15;&#x7528;&#x7684;&#x5BF9;&#x8C61;</li>
@@ -587,14 +600,14 @@ no&#xFF0C;i am dead !
 <h3 id="&#x5783;&#x573E;&#x6536;&#x96C6;-&#x57FA;&#x672C;&#x7B97;&#x6CD5;">&#x5783;&#x573E;&#x6536;&#x96C6;-&#x57FA;&#x672C;&#x7B97;&#x6CD5;</h3>
 <ul>
 <li>&#x6807;&#x8BB0;-&#x6E05;&#x9664;&#x7B97;&#x6CD5;&#xFF08;Mark-Sweep&#xFF09;&#xFF1A;&#x9996;&#x5148;&#x6807;&#x8BB0;&#x51FA;&#x6240;&#x6709;&#x9700;&#x8981;&#x56DE;&#x6536;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x6807;&#x8BB0;&#x5B8C;&#x6210;&#x540E;&#x7EDF;&#x4E00;&#x56DE;&#x6536;&#x6240;&#x6709;&#x88AB;&#x6807;&#x8BB0;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x7F3A;&#x9677;&#xFF1A;&#x6548;&#x7387;&#x5DEE;&#xFF0C;&#x4F1A;&#x4EA7;&#x751F;&#x5927;&#x91CF;&#x4E0D;&#x8FDE;&#x7EED;&#x7684;&#x5185;&#x5B58;&#x788E;&#x7247;
-<a href="img/mark-before.png" data-lightbox="27e9e982-6672-4826-9dd4-906b6aa2e9b0" data-title="mark-before"><img src="img/mark-before.png" alt="mark-before"></a>
-<a href="img/mark-after.png" data-lightbox="03dcaf19-a604-4027-b552-7661e8147e67" data-title="mark-after"><img src="img/mark-after.png" alt="mark-after"></a></li>
+<a href="img/mark-before.png" data-lightbox="9e879bc5-002e-4b02-b7cf-592145959a58" data-title="mark-before"><img src="img/mark-before.png" alt="mark-before"></a>
+<a href="img/mark-after.png" data-lightbox="62bb3252-13c3-4938-8206-7c13d8efd3e9" data-title="mark-after"><img src="img/mark-after.png" alt="mark-after"></a></li>
 <li>&#x590D;&#x5236;&#x7B97;&#x6CD5;&#xFF08;Copying&#xFF09;&#xFF1A;&#x5C06;&#x53EF;&#x7528;&#x5185;&#x5B58;&#x6309;&#x5BB9;&#x91CF;&#x5212;&#x5206;&#x4E3A;&#x5927;&#x5C0F;&#x76F8;&#x7B49;&#x7684;&#x4E24;&#x5757;&#xFF0C;&#x6BCF;&#x6B21;&#x53EA;&#x4F7F;&#x7528;&#x5176;&#x4E2D;&#x7684;&#x4E00;&#x5757;&#x3002;&#x5F53;&#x8FD9;&#x4E00;&#x5757;&#x7684;&#x5185;&#x5B58;&#x7528;&#x5B8C;&#x4E86;&#xFF0C;&#x5C31;&#x5C06;&#x8FD8;&#x5B58;&#x6D3B;&#x7740;&#x7684;&#x5BF9;&#x8C61;&#x590D;&#x5236;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x5757;&#x4E0A;&#x9762;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x628A;&#x5DF2;&#x4F7F;&#x7528;&#x8FC7;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x4E00;&#x6B21;&#x6E05;&#x7406;&#x6389;&#xFF0C;&#x5B9E;&#x73B0;&#x7B80;&#x5355;&#xFF0C;&#x8FD0;&#x884C;&#x9AD8;&#x6548;&#xFF0C;&#x7F3A;&#x9677;&#xFF1A;&#x5C06;&#x5185;&#x5B58;&#x7F29;&#x5C0F;&#x4E3A;&#x539F;&#x6765;&#x7684;&#x4E00;&#x534A;&#x3002;&#x73B0;&#x5728;&#x7684;&#x5546;&#x7528;&#x865A;&#x62DF;&#x673A;&#x90FD;&#x91C7;&#x7528;&#x8FD9;&#x79CD;&#x6536;&#x96C6;&#x7B97;&#x6CD5;&#x6765;&#x56DE;&#x6536;&#x65B0;&#x751F;&#x4EE3;&#xFF0C;&#x5806;&#x5185;&#x5B58;&#x4E0D;&#x662F;&#x6309;&#x7167;1:1&#x7684;&#x6BD4;&#x4F8B;&#x6765;&#x5212;&#x5206;&#x7684;&#xFF0C;&#x800C;&#x662F;&#x5C06;&#x5176;&#x5206;&#x4E3A;&#x4E00;&#x5757;&#x8F83;&#x5927;&#x7684;Eden&#x7A7A;&#x95F4;&#x548C;&#x4E24;&#x5757;&#x8F83;&#x5C0F;&#x7684;Survivor&#x7A7A;&#x95F4;&#xFF08;8:1:1&#xFF09;&#xFF0C;&#x6BCF;&#x6B21;&#x4F7F;&#x7528;Eden&#x548C;&#x5176;&#x4E2D;&#x4E00;&#x5757;Survivor&#x3002;&#x56DE;&#x6536;&#x65F6;&#xFF0C;&#x5C06;Eden&#x548C;Survivor&#x4E2D;&#x8FD8;&#x5B58;&#x6D3B;&#x7684;&#x5BF9;&#x8C61;&#x4E00;&#x6B21;&#x6027;&#x5730;&#x590D;&#x5236;&#x5230;&#x53E6;&#x4E00;&#x5757;Survivor&#x7A7A;&#x95F4;&#x4E0A;&#xFF08;&#x5F53;&#x6B64;Survivor&#x7A7A;&#x95F4;&#x4E0D;&#x591F;&#x4F7F;&#xFF0C;&#x9700;&#x8981;&#x4F9D;&#x8D56;&#x8001;&#x5E74;&#x4EE3;&#x8FDB;&#x884C;&#x5206;&#x914D;&#x62C5;&#x4FDD;&#xFF09;&#xFF0C;&#x6700;&#x540E;&#x6E05;&#x7406;&#x6389;Eden&#x548C;&#x521A;&#x624D;&#x7528;&#x8FC7;&#x7684;Survivor&#x7A7A;&#x95F4;&#xFF0C;&#x8FD9;&#x6837;&#x7684;&#x8BDD;&#x53EA;&#x6709;10%&#x7684;&#x5185;&#x5B58;&#x88AB;&#x6D6A;&#x8D39;
-<a href="img/copy-before.png" data-lightbox="f2ed620e-c853-4cea-9b36-8797e653faee" data-title="copy-before"><img src="img/copy-before.png" alt="copy-before"></a>
-<a href="img/copy-after.png" data-lightbox="98531332-e812-404f-93e5-a73a3a690474" data-title="copy-after"><img src="img/copy-after.png" alt="copy-after"></a></li>
+<a href="img/copy-before.png" data-lightbox="a78b0153-e449-4765-8510-ee187274b8bd" data-title="copy-before"><img src="img/copy-before.png" alt="copy-before"></a>
+<a href="img/copy-after.png" data-lightbox="f5fd30b7-ff43-46c8-90f4-f6d66b19b167" data-title="copy-after"><img src="img/copy-after.png" alt="copy-after"></a></li>
 <li>&#x6807;&#x8BB0;-&#x6574;&#x7406;&#x7B97;&#x6CD5;&#xFF08;Mark-Compact&#xFF09;&#xFF1A;&#x8FD9;&#x79CD;&#x6536;&#x96C6;&#x7B97;&#x6CD5;&#x6765;&#x56DE;&#x6536;&#x8001;&#x5E74;&#x4EE3;&#xFF0C;&#x6807;&#x8BB0;&#x8FC7;&#x7A0B;&#x4E0E;<code>&#x6807;&#x8BB0;-&#x6E05;&#x9664;</code>&#x7B97;&#x6CD5;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x540E;&#x7EED;&#x6B65;&#x9AA4;&#x4E0D;&#x662F;&#x76F4;&#x63A5;&#x5BF9;&#x53EF;&#x56DE;&#x6536;&#x5BF9;&#x8C61;&#x8FDB;&#x884C;&#x6E05;&#x7406;&#xFF0C;&#x800C;&#x662F;&#x8BA9;&#x6240;&#x6709;&#x5B58;&#x6D3B;&#x7684;&#x5BF9;&#x8C61;&#x90FD;&#x5411;&#x4E00;&#x7AEF;&#x79FB;&#x52A8;&#xFF0C;&#x7136;&#x540E;&#x76F4;&#x63A5;&#x6E05;&#x7406;&#x6389;&#x7AEF;&#x8FB9;&#x754C;&#x4EE5;&#x5916;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x56E0;&#x4E0D;&#x4F1A;&#x4EA7;&#x751F;&#x5927;&#x91CF;&#x4E0D;&#x8FDE;&#x7EED;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x9002;&#x5408;&#x8001;&#x5E74;&#x4EE3;&#x7684;&#x5927;&#x5BF9;&#x8C61;&#x5B58;&#x50A8;
-<a href="img/handle-before.png" data-lightbox="efe252dd-5268-4ce2-8374-7dcd827ae1cc" data-title="handle-before"><img src="img/handle-before.png" alt="handle-before"></a>
-<a href="img/handle-after.png" data-lightbox="a58af784-5c8f-4755-9982-02259cb80522" data-title="handle-after"><img src="img/handle-after.png" alt="handle-after"></a></li>
+<a href="img/handle-before.png" data-lightbox="553d9e7f-fdf8-4e46-ba96-337049220a5d" data-title="handle-before"><img src="img/handle-before.png" alt="handle-before"></a>
+<a href="img/handle-after.png" data-lightbox="e589e170-fce1-4558-a912-c130bfe508af" data-title="handle-after"><img src="img/handle-after.png" alt="handle-after"></a></li>
 <li>&#x5206;&#x4EE3;&#x6536;&#x96C6;&#x7B97;&#x6CD5;&#xFF08;Generational Collection&#xFF09;&#xFF1A;&#x6839;&#x636E;&#x5BF9;&#x8C61;&#x5B58;&#x6D3B;&#x5468;&#x671F;&#x7684;&#x4E0D;&#x540C;&#x5C06;&#x5185;&#x5B58;&#x5212;&#x5206;&#x4E3A;&#x51E0;&#x5757;&#xFF0C;&#x4E00;&#x822C;&#x662F;&#x628A;Java&#x5806;&#x5206;&#x4E3A;&#x65B0;&#x751F;&#x4EE3;&#x548C;&#x8001;&#x751F;&#x4EE3;&#xFF0C;&#x8FD9;&#x6837;&#x5C31;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5404;&#x4E2A;&#x5E74;&#x4EE3;&#x7684;&#x7279;&#x70B9;&#x91C7;&#x7528;&#x6700;&#x9002;&#x5F53;&#x7684;&#x6536;&#x96C6;&#x7B97;&#x6CD5;&#x3002;</li>
 <li>&#x65B0;&#x751F;&#x4EE3;&#xFF1A;&#x5927;&#x91CF;&#x56DE;&#x6536;&#xFF0C;&#x5C11;&#x91CF;&#x5B58;&#x6D3B;&#xFF0C;&#x9009;&#x7528;&#x590D;&#x5236;&#x7B97;&#x6CD5;</li>
 <li>&#x8001;&#x751F;&#x4EE3;&#xFF1A;&#x5927;&#x91CF;&#x5B58;&#x6D3B;&#xFF0C;&#x6CA1;&#x6709;&#x989D;&#x5916;&#x7A7A;&#x95F4;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x5206;&#x914D;&#x62C5;&#x4FDD;&#xFF0C;&#x4F7F;&#x7528;<code>&#x6807;&#x8BB0;-&#x6574;&#x7406;</code>&#x7B97;&#x6CD5;&#x6765;&#x56DE;&#x6536;</li>
@@ -614,7 +627,7 @@ no&#xFF0C;i am dead !
 <p>&#x4F7F;&#x7528;Safepoint&#x7406;&#x8BBA;&#x4E0A;&#x53EF;&#x4EE5;&#x89E3;&#x51B3;&#x5982;&#x4F55;&#x8FDB;&#x5165;GC&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x4F46;&#x5B9E;&#x9645;&#x60C5;&#x51B5;&#x5E76;&#x4E0D;&#x4E00;&#x5B9A;&#xFF0C;Safepoint&#x673A;&#x5236;&#x4FDD;&#x8BC1;&#x4E86;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x5728;&#x4E0D;&#x592A;&#x957F;&#x7684;&#x65F6;&#x95F4;&#x5185;&#x5C31;&#x4F1A;&#x9047;&#x5230;&#x53EF;&#x8FDB;&#x5165;GC&#x7684;Safepoint&#xFF0C;&#x4F46;&#x7EBF;&#x7A0B;&#x5904;&#x4E8E;<code>Sleep</code>&#x72B6;&#x6001;&#x6216;&#x8005;<code>Blocked</code>&#x72B6;&#x6001;&#xFF0C;&#x8FD9;&#x65F6;&#x5019;&#x65E0;&#x6CD5;&#x201C;&#x8DD1;&#x201D;&#x8FDB;Safepoint&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x5C31;&#x9700;&#x8981;<code>&#x5B89;&#x5168;&#x533A;&#x57DF;&#xFF08;Safe Region&#xFF09;</code>&#x6765;&#x89E3;&#x51B3;</p>
 <p><code>Safe Region</code>&#x662F;&#x6307;&#x5728;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#x7247;&#x6BB5;&#x4E2D;&#xFF0C;&#x5F15;&#x7528;&#x5173;&#x7CFB;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x53D8;&#x5316;&#xFF0C;&#x5728;&#x8FD9;&#x4E2A;&#x533A;&#x57DF;&#x4E2D;&#x7684;&#x4EFB;&#x610F;&#x5730;&#x65B9;&#x5F00;&#x59CB;GC&#x90FD;&#x662F;&#x5B89;&#x5168;&#x7684;&#xFF0C;&#x5728;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x5230;Safe Region&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x9996;&#x5148;&#x6807;&#x8BC6;&#x81EA;&#x5DF1;&#x5DF2;&#x7ECF;&#x8FDB;&#x5165;&#x4E86;Safe Region&#xFF0C;&#x90A3;&#x6837;&#xFF0C;&#x5F53;&#x5728;&#x8FD9;&#x6BB5;&#x65F6;&#x95F4;&#x91CC;JVM&#x8981;&#x53D1;&#x8D77;GC&#x65F6;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x7BA1;&#x6807;&#x8BC6;&#x81EA;&#x5DF1;&#x4E3A;Safe Region&#x72B6;&#x6001;&#x7684;&#x7EBF;&#x7A0B;&#x4E86;&#x3002;&#x5728;&#x7EBF;&#x7A0B;&#x8981;&#x79BB;&#x5F00;Safe Region&#x65F6;&#xFF0C;&#x8981;&#x68C0;&#x67E5;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B8C;&#x6210;&#x4E86;&#x6574;&#x4E2A;GC&#x8FC7;&#x7A0B;&#xFF0C;&#x5982;&#x679C;&#x5B8C;&#x6210;&#xFF0C;&#x7EBF;&#x7A0B;&#x5C31;&#x7EE7;&#x7EED;&#x8FDB;&#x884C;&#xFF0C;&#x5426;&#x5219;&#xFF0C;&#x5B83;&#x5C31;&#x5FC5;&#x987B;&#x7B49;&#x5F85;&#x76F4;&#x5230;&#x6536;&#x5230;&#x53EF;&#x4EE5;&#x5B89;&#x5168;&#x79BB;&#x5F00;Safe Region&#x7684;&#x4FE1;&#x53F7;&#x4E3A;&#x6B62;</p>
 <h2 id="&#x5783;&#x573E;&#x6536;&#x96C6;&#x5668;">&#x5783;&#x573E;&#x6536;&#x96C6;&#x5668;</h2>
-<p><a href="img/gc.png" data-lightbox="b2306b7c-2867-4e83-96cc-1c43f7488d90" data-title="gc"><img src="img/gc.png" alt="gc"></a></p>
+<p><a href="img/gc.png" data-lightbox="b200eb00-bb74-42c8-b26a-4dafcd80d19d" data-title="gc"><img src="img/gc.png" alt="gc"></a></p>
 <h3 id="&#x65B0;&#x751F;&#x4EE3;&#x5783;&#x573E;&#x6536;&#x96C6;&#x5668;">&#x65B0;&#x751F;&#x4EE3;&#x5783;&#x573E;&#x6536;&#x96C6;&#x5668;</h3>
 <ul>
 <li>Serial&#x6536;&#x96C6;&#x5668;&#xFF1A;</li>
@@ -784,7 +797,7 @@ no&#xFF0C;i am dead !
 <li>-XX:+PrintGCApplicationStoppedTime // &#x8F93;&#x51FA;GC&#x9020;&#x6210;&#x5E94;&#x7528;&#x6682;&#x505C;&#x7684;&#x65F6;&#x95F4;</li>
 <li>-Xloggc:../logs/gc.log &#x65E5;&#x5FD7;&#x6587;&#x4EF6;&#x7684;&#x8F93;&#x51FA;&#x8DEF;&#x5F84;</li>
 </ul>
-<p><a href="img/gc-log.png" data-lightbox="706578d1-4ad2-4036-83bc-2de029f1c3b3" data-title="gc-log"><img src="img/gc-log.png" alt="gc-log"></a></p>
+<p><a href="img/gc-log.png" data-lightbox="c4404d70-c315-4c1e-94fc-49fceb1447e2" data-title="gc-log"><img src="img/gc-log.png" alt="gc-log"></a></p>
 <ul>
 <li>&#x524D;&#x9762;&#x7684;&#x6570;&#x5B57;<code>0.119&#xFF0C;0.121</code>&#x4EE3;&#x8868;&#x4E86;GC&#x53D1;&#x751F;&#x4E8B;&#x4EF6;&#xFF0C;&#x8FD9;&#x4E2A;&#x6570;&#x5B57;&#x542B;&#x4E49;&#x662F;&#x4ECE;Java&#x865A;&#x62DF;&#x673A;&#x542F;&#x52A8;&#x4EE5;&#x6765;&#x7ECF;&#x8FC7;&#x7684;&#x79D2;&#x6570;</li>
 <li>GC&#x65E5;&#x5FD7;&#x5F00;&#x5934;<code>[GC</code>&#x548C;<code>[Full GC</code>&#x8868;&#x793A;&#x89E6;&#x53D1;&#x4E86;<code>Minor GC</code>&#x548C;<code>Full GC</code><ul>
@@ -915,7 +928,7 @@ no&#xFF0C;i am dead !
 }
 </code></pre>
 <p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;
-<a href="img/eden-allocation.png" data-lightbox="013a73a9-e6e5-4aad-adda-ad30091788c2" data-title="eden-allocation"><img src="img/eden-allocation.png" alt="eden-allocation"></a></p>
+<a href="img/eden-allocation.png" data-lightbox="fc936dcd-821a-4148-b8d9-31ce1a8c9cb9" data-title="eden-allocation"><img src="img/eden-allocation.png" alt="eden-allocation"></a></p>
 <p>&#x7ED3;&#x679C;&#x5206;&#x6790;&#xFF1A;
 &#x4ECE;&#x7ED3;&#x679C;&#x4E0A;&#x770B;&#xFF0C;&#x865A;&#x62DF;&#x673A;&#x8FDB;&#x884C;&#x8FC7;&#x4E00;&#x6B21;Minor GC&#xFF0C;&#x5177;&#x4F53;&#x65F6;&#x673A;&#x662F;&#x4E3A;<code>allocation4</code>&#x5BF9;&#x8C61;&#x5728;Eden&#x533A;&#x5206;&#x914D;&#x5185;&#x5B58;&#x65F6;&#xFF0C;&#x53D1;&#x73B0;Eden&#x533A;&#x7684;&#x5185;&#x5B58;&#x4E0D;&#x8DB3;&#xFF0C;&#x56E0;&#x6B64;&#x53D1;&#x751F;Minor GC&#x3002;GC&#x671F;&#x95F4;&#x865A;&#x62DF;&#x673A;&#x6709;&#x53D1;&#x73B0;&#x4ECD;&#x65E7;&#x5B58;&#x6D3B;&#x7684;3&#x4E2A;2MB&#x5927;&#x5C0F;&#x7684;&#x5BF9;&#x8C61;&#x65E0;&#x6CD5;&#x653E;&#x5165;Survior to&#x7A7A;&#x95F4;&#xFF0C;&#x6240;&#x4EE5;&#x53EA;&#x597D;&#x901A;&#x8FC7;&#x5206;&#x914D;&#x62C5;&#x4FDD;&#x673A;&#x5236;&#x63D0;&#x524D;&#x8F6C;&#x79FB;&#x5230;&#x8001;&#x5E74;&#x4EE3;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x53BB;&#x3002;&#x8FD9;&#x6B21;GC&#x7ED3;&#x675F;&#x540E;&#xFF0C;4MB&#x7684;allocation4&#x5BF9;&#x8C61;&#x88AB;&#x5206;&#x914D;&#x5728;Eden&#x4E2D;&#xFF0C;Survivor&#x7A7A;&#x95F2;&#xFF0C;&#x8001;&#x5E74;&#x4EE3;&#x5360;&#x7528;6MB</p>
 <h3 id="&#x5927;&#x5BF9;&#x8C61;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x8001;&#x5E74;&#x4EE3;">&#x5927;&#x5BF9;&#x8C61;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x8001;&#x5E74;&#x4EE3;</h3>
@@ -939,12 +952,12 @@ no&#xFF0C;i am dead !
 }
 </code></pre>
 <p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;
-<a href="img/test-pretenureSizeThreshold.png" data-lightbox="61748d95-c9a6-4dfb-8fc5-2e568d89ade1" data-title="test-pretenureSizeThreshold"><img src="img/test-pretenureSizeThreshold.png" alt="test-pretenureSizeThreshold"></a></p>
+<a href="img/test-pretenureSizeThreshold.png" data-lightbox="1af80918-6ec3-4154-947a-2ca73e2eb102" data-title="test-pretenureSizeThreshold"><img src="img/test-pretenureSizeThreshold.png" alt="test-pretenureSizeThreshold"></a></p>
 <p>&#x7ED3;&#x679C;&#x5206;&#x6790;&#xFF1A;
 &#x4ECE;&#x914D;&#x7F6E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x8D85;&#x8FC7;3M&#x7684;&#x5927;&#x5BF9;&#x8C61;&#x5C31;&#x4F1A;&#x88AB;&#x5206;&#x914D;&#x5230;&#x8001;&#x5E74;&#x4EE3;&#xFF0C;&#x73B0;&#x65E5;&#x5FD7;&#x6253;&#x5370;&#xFF0C;&#x8001;&#x5E74;&#x4EE3;&#x6709;5M&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#xFF0C;&#x73B0;&#x5360;&#x7528;80%&#xFF0C;&#x5373;&#xFF1A;pretenureSizeThreshold&#x8FD9;&#x4E2A;4M&#x7684;&#x5927;&#x5BF9;&#x8C61;&#x5DF2;&#x88AB;&#x5206;&#x914D;&#x5728;&#x8001;&#x5E74;&#x4EE3;&#x5185;&#x5B58;&#x533A;&#x57DF;&#x4E2D;</p>
 <h3 id="&#x957F;&#x671F;&#x5B58;&#x6D3B;&#x7684;&#x5BF9;&#x8C61;&#x5C06;&#x8FDB;&#x5165;&#x8001;&#x5E74;&#x4EE3;">&#x957F;&#x671F;&#x5B58;&#x6D3B;&#x7684;&#x5BF9;&#x8C61;&#x5C06;&#x8FDB;&#x5165;&#x8001;&#x5E74;&#x4EE3;</h3>
 <p>&#x4E3A;&#x4E86;&#x6267;&#x884C;&#x5206;&#x4EE3;&#x6536;&#x96C6;&#xFF0C;&#x865A;&#x62DF;&#x673A;&#x7ED9;&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x5E74;&#x9F84;&#xFF08;Age&#xFF09;&#x8BA1;&#x6570;&#x5668;&#xFF1A;</p>
-<p><a href="img/age.png" data-lightbox="a10a7039-71c6-4b02-a20d-5f6bc085cd98" data-title="age"><img src="img/age.png" alt="age"></a></p>
+<p><a href="img/age.png" data-lightbox="5f1adf71-1034-47b6-ad31-b4493fbc5867" data-title="age"><img src="img/age.png" alt="age"></a></p>
 <pre><code class="lang-java"><span class="hljs-comment">/**
  * JVM&#x4F1A;&#x628A;&#x957F;&#x671F;&#x5B58;&#x6D3B;&#x7684;&#x5BF9;&#x8C61;&#x653E;&#x5165;&#x8001;&#x5E74;&#x4EE3;
  * VM Args: -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:+UseSerialGC
@@ -970,9 +983,9 @@ no&#xFF0C;i am dead !
 <p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;</p>
 <ul>
 <li>&#x5F53;<code>-XX:MaxTenuringThreshold=1</code>&#x65F6;&#xFF1A;
-<a href="img/age1.png" data-lightbox="ca21e498-9faa-4c58-9b83-1a660c8047bb" data-title="age1"><img src="img/age1.png" alt="age1"></a></li>
+<a href="img/age1.png" data-lightbox="762d2958-7682-4dd1-a8b6-66a8a69ca3c5" data-title="age1"><img src="img/age1.png" alt="age1"></a></li>
 <li>&#x5F53;<code>-XX:MaxTenuringThreshold=15</code>&#x65F6;&#xFF1A;
-<a href="img/age15.png" data-lightbox="1aea817c-d6f2-4a61-ac14-bd014d4ab1a2" data-title="age15"><img src="img/age15.png" alt="age15"></a></li>
+<a href="img/age15.png" data-lightbox="efe684ee-425f-4e30-b21e-c6ae92a5ccdc" data-title="age15"><img src="img/age15.png" alt="age15"></a></li>
 </ul>
 <p>&#x7ED3;&#x679C;&#x5206;&#x6790;&#xFF1A;&#xFF08;&#x524D;&#x63D0;&#xFF1A;allocation1&#x5BF9;&#x8C61;&#x5927;&#x5C0F;&#x5C0F;&#x4E8E;Survivor&#x7A7A;&#x95F4;&#x7684;&#x4E00;&#x534A;&#xFF09;</p>
 <ul>
@@ -1005,7 +1018,7 @@ no&#xFF0C;i am dead !
 }
 </code></pre>
 <p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;
-<a href="img/age-judge.png" data-lightbox="8cda691e-c6a3-4dc7-a04d-1de6849b41ba" data-title="age-judge"><img src="img/age-judge.png" alt="age-judge"></a></p>
+<a href="img/age-judge.png" data-lightbox="f5223760-4d18-410c-b7eb-b6df60fd87d2" data-title="age-judge"><img src="img/age-judge.png" alt="age-judge"></a></p>
 <p>&#x7ED3;&#x679C;&#x5206;&#x6790;&#xFF1A;
 allocation1&#xFF0C;allocation2&#x5BF9;&#x8C61;&#x7684;Age&#x5747;&#x4E3A;1&#xFF0C;&#x8FDC;&#x8FDC;&#x5C0F;&#x4E8E;<code>-XX:MaxTenuringThreshold=15</code>&#x7684;&#x5E74;&#x9F84;&#x8981;&#x6C42;&#xFF0C;&#x4F46;&#x4E8C;&#x8005;&#x52A0;&#x8D77;&#x6765;&#x7684;&#x5927;&#x5C0F;&#x521A;&#x597D;&#x4E3A;Survivor&#x533A;&#x7684;&#x4E00;&#x534A;&#xFF0C;&#x6240;&#x4EE5;&#x8FD9;&#x4E24;&#x4E2A;&#x5BF9;&#x8C61;&#x53EF;&#x76F4;&#x63A5;&#x8FDB;&#x5165;&#x8001;&#x5E74;&#x4EE3;</p>
 <h3 id="&#x7A7A;&#x95F4;&#x5206;&#x914D;&#x62C5;&#x4FDD;">&#x7A7A;&#x95F4;&#x5206;&#x914D;&#x62C5;&#x4FDD;</h3>
@@ -1049,7 +1062,7 @@ D -- false --&gt; G((&#x624B;&#x52A8;Full GC))
 }
 </code></pre>
 <p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;
-<a href="img/promotion.png" data-lightbox="e9e8af51-7d66-43e0-a209-9532cc62057e" data-title="promotion"><img src="img/promotion.png" alt="promotion"></a></p>
+<a href="img/promotion.png" data-lightbox="7028e321-d0b7-4ecc-9baa-ba1a1d832d73" data-title="promotion"><img src="img/promotion.png" alt="promotion"></a></p>
 <pre><code class="lang-java"><span class="hljs-comment">/**
  * HandlePromotionFailure&#x53C2;&#x6570;&#x673A;&#x5236;
  * VM Args: -Xms20M -Xmx20M -Xmn10M -XX:+PrintGCDetails -XX:SurvivorRatio=8 -XX:+UseSerialGC
@@ -1082,7 +1095,7 @@ D -- false --&gt; G((&#x624B;&#x52A8;Full GC))
 }
 </code></pre>
 <p>&#x8FD0;&#x884C;&#x7ED3;&#x679C;&#xFF1A;
-<a href="img/promotion-failed.png" data-lightbox="07b223e4-78c9-4a5f-9c0a-a7c2d66844ce" data-title="promotion-failed"><img src="img/promotion-failed.png" alt="promotion-failed"></a></p>
+<a href="img/promotion-failed.png" data-lightbox="e4124000-f756-410e-a759-7d68b241295c" data-title="promotion-failed"><img src="img/promotion-failed.png" alt="promotion-failed"></a></p>
 </body></html>
                                 
                                 </section>
@@ -1126,7 +1139,7 @@ D -- false --&gt; G((&#x624B;&#x52A8;Full GC))
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"GC","level":"1.3.3","depth":2,"next":{"title":"JVM性能监控与故障处理工具","level":"1.3.4","depth":2,"path":"jvm/jvm-tool.md","ref":"jvm/jvm-tool.md","articles":[]},"previous":{"title":"运行时数据区域","level":"1.3.2","depth":2,"path":"jvm/runtime-data-area.md","ref":"jvm/runtime-data-area.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["lightbox","mermaid-gb3","page-toc-button","hide-element","code","back-to-top-button","chapter-fold","splitter","-sharing","sharing-plus","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy dsx2016.com 2019","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"jvm/gc.md","mtime":"2019-08-26T08:27:08.195Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-18T09:14:39.203Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"GC","level":"1.3.3","depth":2,"next":{"title":"JVM性能监控与故障处理工具","level":"1.3.4","depth":2,"path":"jvm/jvm-tool.md","ref":"jvm/jvm-tool.md","articles":[]},"previous":{"title":"运行时数据区域","level":"1.3.2","depth":2,"path":"jvm/runtime-data-area.md","ref":"jvm/runtime-data-area.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["lightbox","mermaid-gb3","page-toc-button","hide-element","code","back-to-top-button","chapter-fold","splitter","-sharing","sharing-plus","livereload"],"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy dsx2016.com 2019","modify_label":"该文章修订时间：","modify_format":"YYYY-MM-DD HH:mm:ss"},"chapter-fold":{},"livereload":{},"splitter":{},"search":{},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"mermaid-gb3":{},"lightbox":{"jquery":true},"page-toc-button":{},"back-to-top-button":{},"sharing":{"qq":true,"all":["douban","facebook","google","instapaper","linkedin","twitter","weibo","messenger","qq","qzone","viber","whatsapp"],"douban":true,"facebook":true,"weibo":true,"twitter":true,"pocket":true,"google":true,"qzone":true},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"jvm/gc.md","mtime":"2019-08-26T08:27:08.195Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-23T06:52:32.337Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
